@@ -11,6 +11,7 @@ function solution(m, arr) {
    * 고로, 모든 상품가격을 50% 해놓고 나머지를 다 더해서 m보다 커지는 경우에 멈춰서 그 카운트를 반환해야 맞는 정답이 됨.
    * 완전 탐색의 경우인데 많이 풀어보면서 완전탐색이 필요한지 안한지 구별하는 것이 중요해보임
    */
+
   // let priceArr = [];
 
   // let max = arr[0][0];
@@ -35,6 +36,22 @@ function solution(m, arr) {
   //   sum += n;
   //   answer++;
   // }
+
+  arr.sort((a, b) => a[0] + a[1] - (b[0] + b[1]));
+
+  for (let i = 0; i < arr.length; i++) {
+    let money = m - (arr[i][0] / 2 + arr[i][1]);
+    let count = 1;
+    for (let j = 0; j < arr.length; j++) {
+      let sumProductDelivery = arr[j][0] + arr[j][1];
+      if (j !== i && money < sumProductDelivery) break;
+      if (j !== i && money >= sumProductDelivery) {
+        money -= sumProductDelivery;
+        count++;
+      }
+      answer = Math.max(answer, count);
+    }
+  }
 
   return answer;
 }
