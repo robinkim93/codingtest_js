@@ -16,7 +16,6 @@ function solution(n) {
    * DFS(2)는 DFS(2)의 실행 주소로 돌아가고 하단에 있는 console.log를 실행하고 2가 출력된다.
    *
    * 이 순서로, 출력 위치에 따라 출력되는 값의 순서가 바뀐다.
-   *
    */
 
   const DFS = (n) => {

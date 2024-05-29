@@ -1,5 +1,6 @@
 function solution(n) {
   let answer = "";
+
   const DFS = (n) => {
     if (n === 0) return;
     else {
@@ -9,6 +10,7 @@ function solution(n) {
   };
 
   DFS(n);
+
   return answer;
 }
 
