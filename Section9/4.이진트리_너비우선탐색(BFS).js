@@ -3,11 +3,6 @@ function solution(n, m) {
   let queue = [];
 
   queue.push(n);
-
-  if (7 > 7) {
-    console.log("true");
-  }
-
   // 24. queue의 length가 0이 되면서 while문 루프 종료.
   while (queue.length) {
     // 1. v는 초기값인 1이 됨. queue = [] 상태
@@ -28,7 +23,7 @@ function solution(n, m) {
     answer.push(v);
     // 3. [2, 3] 배열에서 nv를 꺼내 nv가 7이 되면 해당 for문 루프 건너뜀
     // 4. 아니라면 첫번째 루프에서 2 push, 두번째 루프에서 3 push
-    // 7. [4, 5] 배열에서 nv를 꺼내 7이 되면 해당 for문 루프 건너뜀
+    // 7. [4, 5] 배열에서 nv를 꺼내 7이 되면 해당 for문 루프 건너뜀ㅌ
     // 8. 아니라면 첫번째 루프에서 4 push, 두번째 루프에서 5 push
     // 9. [6, 7] 배열에서 nv를 꺼내 7이 되면 해당 for문 루프 건너뜀
     // 10. 아니라면 첫번째 루프에서 6 push, 두번째 루프에서 7 push
