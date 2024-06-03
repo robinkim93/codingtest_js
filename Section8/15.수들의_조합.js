@@ -2,7 +2,6 @@ function solution(k, arr, m) {
   let answer = 0;
 
   const DFS = (L, s, sum) => {
-    console.log(L, s, sum, arr[L]);
     if (L === k && sum % m === 0) {
       answer++;
     } else {
